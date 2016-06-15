@@ -22,11 +22,17 @@ import java.util.Objects;
  * @author Roberto Almanza
  */
 public class Sticker {
+    
     private String fileId;
+    
     private int width;
+    
     private int height;
+    
     private PhotoSize thumb;
+    
     private String emoji;
+    
     private int fileSize;
 
     public String getFileId() {
@@ -88,18 +94,22 @@ public class Sticker {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if (this == obj) {
+            return true;
+        }
+        
         if (obj == null) {
             return false;
         }
+        
         if (getClass() != obj.getClass()) {
             return false;
         }
         final Sticker other = (Sticker) obj;
-        if (!Objects.equals(this.fileId, other.fileId)) {
-            return false;
-        }
-        return (this.width == other.width && 
-                this.height == other.height);        
+        return Objects.equals(this.fileId, other.fileId) &&
+                this.width == other.width && 
+                this.height == other.height; 
     }
         
 }

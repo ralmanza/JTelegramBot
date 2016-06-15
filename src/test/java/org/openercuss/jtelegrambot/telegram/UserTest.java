@@ -15,14 +15,19 @@
  */
 package org.openercuss.jtelegrambot.telegram;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Roberto Almanza
  */
 public class UserTest { 
+    
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         User user = new User();
@@ -35,12 +40,10 @@ public class UserTest {
     public void testEqualsOfTwoInstanceWithSameValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Maria");
-        
+        user.setFirstName("Maria");        
         User user2 = new User();
         user2.setId(1);
-        user2.setFirstName("Maria");
-        
+        user2.setFirstName("Maria");        
         assertTrue(user.equals(user2));
     }
     
@@ -48,12 +51,10 @@ public class UserTest {
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Pedro");
-        
+        user.setFirstName("Pedro");        
         User user2 = new User();
         user2.setId(2);
-        user2.setFirstName("Maria");
-        
+        user2.setFirstName("Maria");        
         assertFalse(user.equals(user2));
     }
     
@@ -62,13 +63,11 @@ public class UserTest {
         User user = new User();
         user.setId(1);
         user.setFirstName("Pedro");
-        user.setLastName("Mendez");
-        
+        user.setLastName("Mendez");        
         User user2 = new User();
         user2.setId(1);
         user2.setFirstName("Pedro");
-        user2.setLastName("Lopez");
-        
+        user2.setLastName("Lopez");        
         assertTrue(user.equals(user2));
     }
     
@@ -76,12 +75,10 @@ public class UserTest {
     public void testHashCodeOfTwoInstanceWithSameValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Maria");
-        
+        user.setFirstName("Maria");        
         User user2 = new User();
         user2.setId(1);
-        user2.setFirstName("Maria");
-                
+        user2.setFirstName("Maria");                
         assertEquals(user.hashCode(), user2.hashCode(), 0.00001);
     }
     
@@ -89,12 +86,10 @@ public class UserTest {
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Maria");
-        
+        user.setFirstName("Maria");        
         User user2 = new User();
         user2.setId(2);
-        user2.setFirstName("Pedro");
-                
+        user2.setFirstName("Pedro");                
         assertNotEquals(user.hashCode(), user2.hashCode(), 0.00001);
     }
     
@@ -103,13 +98,11 @@ public class UserTest {
         User user = new User();
         user.setId(1);
         user.setFirstName("Maria");
-        user.setUserName("mariavf");
-        
+        user.setUserName("mariavf");        
         User user2 = new User();
         user2.setId(1);
         user2.setFirstName("Maria");
-        user2.setUserName("mde123");
-                
+        user2.setUserName("mde123");                
         assertEquals(user.hashCode(), user2.hashCode(), 0.00001);
-    }  
+    }
 }

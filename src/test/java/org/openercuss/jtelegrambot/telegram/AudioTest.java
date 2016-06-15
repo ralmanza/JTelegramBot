@@ -15,14 +15,19 @@
  */
 package org.openercuss.jtelegrambot.telegram;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Roberto Almanza
  */
 public class AudioTest {
+    
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         Audio audio = new Audio();
@@ -35,12 +40,10 @@ public class AudioTest {
     public void testEqualsOfTwoInstanceWithSameValues() {
         Audio audio = new Audio();
         audio.setFileId("file1");
-        audio.setDuration(30);
-        
+        audio.setDuration(30);        
         Audio audio2 = new Audio();
         audio2.setFileId("file1");
-        audio2.setDuration(30);
-        
+        audio2.setDuration(30);        
         assertTrue(audio.equals(audio2));
     }
     
@@ -49,11 +52,9 @@ public class AudioTest {
         Audio audio = new Audio();
         audio.setFileId("file1");
         audio.setDuration(10);
-        
         Audio audio2 = new Audio();
         audio2.setFileId("file2");
-        audio2.setDuration(20);
-        
+        audio2.setDuration(20);        
         assertFalse(audio.equals(audio2));
     }
     
@@ -63,14 +64,12 @@ public class AudioTest {
         audio.setFileId("file1");
         audio.setDuration(10);
         audio.setTitle("title");
-        audio.setPerformer("high");
-        
+        audio.setPerformer("high");        
         Audio audio2 = new Audio();
         audio2.setFileId("file1");
         audio2.setDuration(10);
         audio2.setPerformer("low");
         audio2.setFileSize(12);
-        
         assertTrue(audio.equals(audio2));
     }
     
@@ -78,12 +77,10 @@ public class AudioTest {
     public void testHashCodeOfTwoInstanceWithSameValues() {
         Audio audio = new Audio();
         audio.setFileId("file1");
-        audio.setDuration(15);
-        
+        audio.setDuration(15);        
         Audio audio2 = new Audio();
         audio2.setFileId("file1");
-        audio2.setDuration(15);
-                
+        audio2.setDuration(15);                
         assertEquals(audio.hashCode(), audio2.hashCode(), 0.00001);
     }
     
@@ -91,12 +88,10 @@ public class AudioTest {
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         Audio audio = new Audio();
         audio.setFileId("file1");
-        audio.setDuration(50);
-        
+        audio.setDuration(50);        
         Audio audio2 = new Audio();
         audio2.setFileId("file2");
-        audio2.setDuration(50);
-                
+        audio2.setDuration(50);                
         assertNotEquals(audio.hashCode(), audio2.hashCode(), 0.00001);
     }    
     
@@ -105,13 +100,11 @@ public class AudioTest {
         Audio audio = new Audio();
         audio.setFileId("file1");
         audio.setDuration(50);
-        audio.setPerformer("high");
-        
+        audio.setPerformer("high");        
         Audio audio2 = new Audio();
         audio2.setFileId("file1");
         audio2.setDuration(50);
         audio2.setPerformer("low");
-                
         assertEquals(audio.hashCode(), audio2.hashCode(), 0.00001);
     }    
 }

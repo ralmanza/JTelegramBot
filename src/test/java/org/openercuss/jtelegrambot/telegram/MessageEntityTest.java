@@ -15,22 +15,25 @@
  */
 package org.openercuss.jtelegrambot.telegram;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Roberto Almanza
  */
 public class MessageEntityTest {
+    
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         MessageEntity messageEntity = new MessageEntity();
         messageEntity.setType("msg");
         messageEntity.setOffset(10);
-        messageEntity.setLength(50);
-        
+        messageEntity.setLength(50);        
         assertTrue(messageEntity.equals(messageEntity));                
     }    
     
@@ -39,13 +42,11 @@ public class MessageEntityTest {
         MessageEntity messageEntity = new MessageEntity();
         messageEntity.setType("msg");
         messageEntity.setOffset(10);
-        messageEntity.setLength(50);
-        
+        messageEntity.setLength(50);        
         MessageEntity messageEntity2 = new MessageEntity();
         messageEntity2.setType("msg");
         messageEntity2.setOffset(10);
-        messageEntity2.setLength(50);
-        
+        messageEntity2.setLength(50);        
         assertTrue(messageEntity.equals(messageEntity2));
     }
     
@@ -54,13 +55,11 @@ public class MessageEntityTest {
         MessageEntity messageEntity = new MessageEntity();
         messageEntity.setType("msg");
         messageEntity.setOffset(10);
-        messageEntity.setLength(50);
-        
+        messageEntity.setLength(50);        
         MessageEntity messageEntity2 = new MessageEntity();
         messageEntity2.setType("text");
         messageEntity2.setOffset(20);
-        messageEntity2.setLength(80);
-        
+        messageEntity2.setLength(80);        
         assertFalse(messageEntity.equals(messageEntity2));
     }
     
@@ -70,14 +69,12 @@ public class MessageEntityTest {
         messageEntity.setType("msg");
         messageEntity.setOffset(10);
         messageEntity.setLength(50);
-        messageEntity.setUrl("url");
-        
+        messageEntity.setUrl("url");        
         MessageEntity messageEntity2 = new MessageEntity();
         messageEntity2.setType("msg");
         messageEntity2.setOffset(10);
         messageEntity2.setLength(50);
-        messageEntity2.setUrl("url2");
-        
+        messageEntity2.setUrl("url2");        
         assertTrue(messageEntity.equals(messageEntity2));
     }
     
@@ -86,13 +83,11 @@ public class MessageEntityTest {
         MessageEntity messageEntity = new MessageEntity();
         messageEntity.setType("msg");
         messageEntity.setOffset(10);
-        messageEntity.setLength(50);
-                
+        messageEntity.setLength(50);                
         MessageEntity messageEntity2 = new MessageEntity();
         messageEntity2.setType("msg");
         messageEntity2.setOffset(10);
-        messageEntity2.setLength(50);
-        
+        messageEntity2.setLength(50);        
         assertEquals(messageEntity.hashCode(), messageEntity2.hashCode());
     }
     
@@ -101,13 +96,11 @@ public class MessageEntityTest {
         MessageEntity messageEntity = new MessageEntity();
         messageEntity.setType("msg");
         messageEntity.setOffset(10);
-        messageEntity.setLength(50);
-                
+        messageEntity.setLength(50);                
         MessageEntity messageEntity2 = new MessageEntity();
         messageEntity2.setType("msg2");
         messageEntity2.setOffset(20);
-        messageEntity2.setLength(60);
-        
+        messageEntity2.setLength(60);        
         assertNotEquals(messageEntity.hashCode(), messageEntity2.hashCode());
     }
     
@@ -117,14 +110,12 @@ public class MessageEntityTest {
         messageEntity.setType("msg");
         messageEntity.setOffset(10);
         messageEntity.setLength(50);
-        messageEntity.setUrl("url");
-                
+        messageEntity.setUrl("url");                
         MessageEntity messageEntity2 = new MessageEntity();
         messageEntity2.setType("msg");
         messageEntity2.setOffset(10);
         messageEntity2.setLength(50);
-        messageEntity2.setUrl("url2");
-        
+        messageEntity2.setUrl("url2");        
         assertEquals(messageEntity.hashCode(), messageEntity2.hashCode()); 
-    }     
+    }
 }

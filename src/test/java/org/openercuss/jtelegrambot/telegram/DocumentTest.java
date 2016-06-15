@@ -15,20 +15,24 @@
  */
 package org.openercuss.jtelegrambot.telegram;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Roberto Almanza
  */
 public class DocumentTest {
+    
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         Document document = new Document();
         document.setFileId("file1");
-        document.setFileName("doc1");
-        
+        document.setFileName("doc1");        
         assertTrue(document.equals(document));
     }    
     
@@ -36,12 +40,10 @@ public class DocumentTest {
     public void testEqualsOfTwoInstanceWithSameValues() {
         Document document = new Document();
         document.setFileId("file1");
-        document.setFileName("doc1");
-        
+        document.setFileName("doc1");        
         Document document2 = new Document();
         document2.setFileId("file1");
-        document2.setFileName("doc1");
-        
+        document2.setFileName("doc1");        
         assertTrue(document.equals(document2));
     }
     
@@ -49,12 +51,10 @@ public class DocumentTest {
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         Document document = new Document();
         document.setFileId("file1");
-        document.setFileName("doc1");
-        
+        document.setFileName("doc1");        
         Document document2 = new Document();
         document2.setFileId("file2");
-        document2.setFileName("doc2");
-        
+        document2.setFileName("doc2");        
         assertFalse(document.equals(document2));
     }
     
@@ -62,12 +62,10 @@ public class DocumentTest {
     public void testEqualsOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         Document document = new Document();
         document.setFileId("file1");
-        document.setFileName("doc1");
-        
+        document.setFileName("doc1");        
         Document document2 = new Document();
         document2.setFileId("file1");
-        document2.setFileName("doc2");
-        
+        document2.setFileName("doc2");        
         assertTrue(document.equals(document2));        
     }
     
@@ -75,12 +73,10 @@ public class DocumentTest {
     public void testHashCodeOfTwoInstanceWithSameValues() {
         Document document = new Document();
         document.setFileId("file1");
-        document.setFileName("doc1");
-        
+        document.setFileName("doc1");        
         Document document2 = new Document();
         document2.setFileId("file1");
-        document2.setFileName("doc1");
-        
+        document2.setFileName("doc1");        
         assertEquals(document.hashCode(), document2.hashCode());
     }
     
@@ -88,12 +84,10 @@ public class DocumentTest {
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         Document document = new Document();
         document.setFileId("file1");
-        document.setFileName("doc1");
-        
+        document.setFileName("doc1");        
         Document document2 = new Document();
         document2.setFileId("file2");
-        document2.setFileName("doc2");
-        
+        document2.setFileName("doc2");        
         assertNotEquals(document.hashCode(), document2.hashCode());
     }
     
@@ -101,12 +95,10 @@ public class DocumentTest {
     public void testHashCodeOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         Document document = new Document();
         document.setFileId("file1");
-        document.setFileName("doc1");
-        
+        document.setFileName("doc1");        
         Document document2 = new Document();
         document2.setFileId("file1");
-        document2.setFileName("doc2");
-        
+        document2.setFileName("doc2");        
         assertEquals(document.hashCode(), document2.hashCode());        
     }     
 }

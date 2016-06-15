@@ -15,20 +15,24 @@
  */
 package org.openercuss.jtelegrambot.telegram;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Roberto Almanza
  */
 public class ChatMemberTest {
+    
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         ChatMember chatMember = new ChatMember();
         chatMember.setUser(new User());
-        chatMember.setStatus("away");
-        
+        chatMember.setStatus("away");        
         assertTrue(chatMember.equals(chatMember));
     }    
     
@@ -36,12 +40,10 @@ public class ChatMemberTest {
     public void testEqualsOfTwoInstanceWithSameValues() {
         ChatMember chatMember = new ChatMember();
         chatMember.setUser(new User());
-        chatMember.setStatus("away");
-        
+        chatMember.setStatus("away");        
         ChatMember chatMember2 = new ChatMember();
         chatMember2.setUser(new User());
-        chatMember2.setStatus("away");
-        
+        chatMember2.setStatus("away");        
         assertTrue(chatMember.equals(chatMember2));
     }
     
@@ -51,14 +53,12 @@ public class ChatMemberTest {
         user.setId(1);
         ChatMember chatMember = new ChatMember();        
         chatMember.setUser(user);
-        chatMember.setStatus("away");
-        
+        chatMember.setStatus("away");        
         User user2 = new User();
         user2.setId(2);
         ChatMember chatMember2 = new ChatMember();
         chatMember2.setUser(user2);
-        chatMember2.setStatus("away");
-        
+        chatMember2.setStatus("away");        
         assertFalse(chatMember.equals(chatMember2));    
     }
     
@@ -68,12 +68,10 @@ public class ChatMemberTest {
         user.setId(1);
         ChatMember chatMember = new ChatMember();        
         chatMember.setUser(user);
-        chatMember.setStatus("away");
-        
+        chatMember.setStatus("away");        
         ChatMember chatMember2 = new ChatMember();        
         chatMember2.setUser(user);
-        chatMember2.setStatus("away");
-        
+        chatMember2.setStatus("away");        
         assertEquals(chatMember.hashCode(), chatMember2.hashCode());
     }
     
@@ -83,14 +81,12 @@ public class ChatMemberTest {
         user.setId(1);
         ChatMember chatMember = new ChatMember();        
         chatMember.setUser(user);
-        chatMember.setStatus("away");
-        
+        chatMember.setStatus("away");        
         User user2 = new User();
         user.setId(2);
         ChatMember chatMember2 = new ChatMember();        
         chatMember2.setUser(user2);
-        chatMember2.setStatus("in-line");
-        
+        chatMember2.setStatus("in-line");        
         assertNotEquals(chatMember.hashCode(), chatMember2.hashCode());
     }    
 }

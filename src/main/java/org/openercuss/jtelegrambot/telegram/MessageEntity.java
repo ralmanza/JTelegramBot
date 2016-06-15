@@ -22,10 +22,15 @@ import java.util.Objects;
  * @author Roberto Almanza
  */
 public class MessageEntity {
+    
     private String type;
+    
     private int offset;
+    
     private int length;
+    
     private String url;
+    
     private User user;
 
     public String getType() {
@@ -79,18 +84,21 @@ public class MessageEntity {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if (this == obj) {
+            return true;
+        }
+        
         if (obj == null) {
             return false;
         }
+        
         if (getClass() != obj.getClass()) {
             return false;
         }
         final MessageEntity other = (MessageEntity) obj;
-        if (!Objects.equals(this.type, other.type)) {
-            return false;
-        }
-        return (this.offset == other.offset && 
-                this.length == other.length);        
-    }
-    
+        return Objects.equals(this.type, other.type) &&
+                this.offset == other.offset && 
+                this.length == other.length;        
+    }    
 }

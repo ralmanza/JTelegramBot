@@ -84,15 +84,21 @@ public class CallbackQuery {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if (this == obj) {
+            return true;
+        }
+        
         if (obj == null) {
             return false;
         }
+        
         if (getClass() != obj.getClass()) {
             return false;
         }
         final CallbackQuery other = (CallbackQuery) obj;        
-        return (Objects.equals(this.id, other.id) &&
+        return Objects.equals(this.id, other.id) &&
                 Objects.equals(this.from, other.from) && 
-                Objects.equals(this.data, other.data));
+                Objects.equals(this.data, other.data);
     }
 }

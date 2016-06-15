@@ -53,15 +53,21 @@ public class ChatMember {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if (this == obj) {
+            return true;
+        }
+        
         if (obj == null) {
             return false;
         }
+        
         if (getClass() != obj.getClass()) {
             return false;
         }
         final ChatMember other = (ChatMember) obj;        
-        return (Objects.equals(this.user, other.user) &&
-                Objects.equals(this.status, other.status));
+        return Objects.equals(this.user, other.user) &&
+                Objects.equals(this.status, other.status);
     }
     
 }

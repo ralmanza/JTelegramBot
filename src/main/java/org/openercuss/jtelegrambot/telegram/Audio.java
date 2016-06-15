@@ -92,17 +92,21 @@ public class Audio {
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj) {       
+        
+        if (this == obj) {
+            return true;
+        }
+        
         if (obj == null) {
             return false;
         }
+        
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Audio other = (Audio) obj;
-        if (!Objects.equals(this.fileId, other.fileId)) {
-            return false;
-        }
-        return (this.duration == other.duration);
+        final Audio other = (Audio) obj;         
+        return Objects.equals(this.fileId, other.fileId) && 
+                this.duration == other.duration;
     }
 }

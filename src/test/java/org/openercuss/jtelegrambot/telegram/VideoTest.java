@@ -15,22 +15,26 @@
  */
 package org.openercuss.jtelegrambot.telegram;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Roberto Almanza
  */
 public class VideoTest {
+    
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         Video video = new Video();
         video.setFileId("fileId");
         video.setWidth(10);
         video.setHeight(10);
-        video.setDuration(10);
-        
+        video.setDuration(10);        
         assertTrue(video.equals(video));
     }    
     
@@ -40,14 +44,12 @@ public class VideoTest {
         video.setFileId("fileId");
         video.setWidth(10);
         video.setHeight(10);
-        video.setDuration(10);
-        
+        video.setDuration(10);        
         Video video2 = new Video();
         video2.setFileId("fileId");
         video2.setWidth(10);
         video2.setHeight(10);
-        video2.setDuration(10);
-        
+        video2.setDuration(10);        
         assertTrue(video.equals(video2));
     }
     
@@ -57,14 +59,12 @@ public class VideoTest {
         video.setFileId("fileId");
         video.setWidth(10);
         video.setHeight(10);
-        video.setDuration(10);
-        
+        video.setDuration(10);        
         Video video2 = new Video();
         video2.setFileId("fileId2");
         video2.setWidth(20);
         video2.setHeight(20);
-        video2.setDuration(20);
-        
+        video2.setDuration(20);        
         assertFalse(video.equals(video2));  
     }
     
@@ -75,15 +75,13 @@ public class VideoTest {
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);
-        video.setMimeType("mimeType");
-        
+        video.setMimeType("mimeType");        
         Video video2 = new Video();
         video2.setFileId("fileId");
         video2.setWidth(10);
         video2.setHeight(10);
         video2.setDuration(10);
-        video.setMimeType("mimeType2");
-        
+        video.setMimeType("mimeType2");        
         assertTrue(video.equals(video2));    
     }
     
@@ -93,14 +91,12 @@ public class VideoTest {
         video.setFileId("fileId");
         video.setWidth(10);
         video.setHeight(10);
-        video.setDuration(10);
-        
+        video.setDuration(10);        
         Video video2 = new Video();
         video2.setFileId("fileId");
         video2.setWidth(10);
         video2.setHeight(10);
-        video2.setDuration(10);
-        
+        video2.setDuration(10);        
         assertEquals(video.hashCode(), video2.hashCode()); 
     }
     
@@ -110,14 +106,12 @@ public class VideoTest {
         video.setFileId("fileId");
         video.setWidth(10);
         video.setHeight(10);
-        video.setDuration(10);
-        
+        video.setDuration(10);        
         Video video2 = new Video();
         video2.setFileId("fileId2");
         video2.setWidth(10);
         video2.setHeight(10);
-        video2.setDuration(20);
-        
+        video2.setDuration(20);        
         assertNotEquals(video.hashCode(), video2.hashCode()); 
     }
     
@@ -128,15 +122,13 @@ public class VideoTest {
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);
-        video.setMimeType("mimeType");
-        
+        video.setMimeType("mimeType");        
         Video video2 = new Video();
         video2.setFileId("fileId");
         video2.setWidth(10);
         video2.setHeight(10);
         video2.setDuration(10);
-        video.setMimeType("mimeType2");
-        
+        video.setMimeType("mimeType2");        
         assertEquals(video.hashCode(), video2.hashCode());
-    }      
+    }
 }

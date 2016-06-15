@@ -15,14 +15,19 @@
  */
 package org.openercuss.jtelegrambot.telegram;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Roberto Almanza
  */
 public class CallbackQueryTest {
+    
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         CallbackQuery callbackQuery = new CallbackQuery();
@@ -38,13 +43,11 @@ public class CallbackQueryTest {
         CallbackQuery callbackQuery = new CallbackQuery();
         callbackQuery.setId("query");
         callbackQuery.setFrom(user);
-        callbackQuery.setData("query data");
-        
+        callbackQuery.setData("query data");        
         CallbackQuery callbackQuery2 = new CallbackQuery();
         callbackQuery2.setId("query");
         callbackQuery2.setFrom(user);
-        callbackQuery2.setData("query data");
-        
+        callbackQuery2.setData("query data");        
         assertTrue(callbackQuery.equals(callbackQuery2));
     }
     
@@ -54,13 +57,11 @@ public class CallbackQueryTest {
         CallbackQuery callbackQuery = new CallbackQuery();
         callbackQuery.setId("query");
         callbackQuery.setFrom(user);
-        callbackQuery.setData("query data");
-        
+        callbackQuery.setData("query data");        
         CallbackQuery callbackQuery2 = new CallbackQuery();
         callbackQuery2.setId("query2");
         callbackQuery2.setFrom(user);
-        callbackQuery2.setData("data");
-        
+        callbackQuery2.setData("data");        
         assertFalse(callbackQuery.equals(callbackQuery2));
     }
     
@@ -71,14 +72,12 @@ public class CallbackQueryTest {
         callbackQuery.setId("query");
         callbackQuery.setFrom(user);
         callbackQuery.setData("query data");
-        callbackQuery.setInlineMessageId("msg");
-        
+        callbackQuery.setInlineMessageId("msg");        
         CallbackQuery callbackQuery2 = new CallbackQuery();
         callbackQuery2.setId("query");
         callbackQuery2.setFrom(user);
         callbackQuery2.setData("query data");
-        callbackQuery2.setInlineMessageId("msg");
-        
+        callbackQuery2.setInlineMessageId("msg");        
         assertTrue(callbackQuery.equals(callbackQuery2));
     }
     
@@ -88,13 +87,11 @@ public class CallbackQueryTest {
         CallbackQuery callbackQuery = new CallbackQuery();
         callbackQuery.setId("query");
         callbackQuery.setFrom(user);
-        callbackQuery.setData("query data");
-        
+        callbackQuery.setData("query data");        
         CallbackQuery callbackQuery2 = new CallbackQuery();
         callbackQuery2.setId("query");
         callbackQuery2.setFrom(user);
-        callbackQuery2.setData("query data");
-                
+        callbackQuery2.setData("query data");                
         assertEquals(callbackQuery.hashCode(), callbackQuery2.hashCode(), 0.00001);
     }
     
@@ -104,13 +101,11 @@ public class CallbackQueryTest {
         CallbackQuery callbackQuery = new CallbackQuery();
         callbackQuery.setId("query");
         callbackQuery.setFrom(user);
-        callbackQuery.setData("query data");
-        
+        callbackQuery.setData("query data");        
         CallbackQuery callbackQuery2 = new CallbackQuery();
         callbackQuery2.setId("query2");
         callbackQuery2.setFrom(user);
-        callbackQuery2.setData("data");
-        
+        callbackQuery2.setData("data");        
         assertNotEquals(callbackQuery.hashCode(), callbackQuery2.hashCode());
     }
     
@@ -121,14 +116,12 @@ public class CallbackQueryTest {
         callbackQuery.setId("query");
         callbackQuery.setFrom(user);
         callbackQuery.setData("data");
-        callbackQuery.setInlineMessageId("msgId");
-        
+        callbackQuery.setInlineMessageId("msgId");        
         CallbackQuery callbackQuery2 = new CallbackQuery();
         callbackQuery2.setId("query");
         callbackQuery2.setFrom(user);
         callbackQuery2.setData("data");
-        callbackQuery2.setInlineMessageId("msg");
-                
+        callbackQuery2.setInlineMessageId("msg");                
         assertEquals(callbackQuery.hashCode(), callbackQuery2.hashCode(), 0.00001);
     } 
 }

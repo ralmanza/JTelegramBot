@@ -15,21 +15,25 @@
  */
 package org.openercuss.jtelegrambot.telegram;
 
-import static org.junit.Assert.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  * @author Roberto Almanza
  */
 public class StickerTest {
+    
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         Sticker sticker = new Sticker();
         sticker.setFileId("fileId");
         sticker.setHeight(10);
-        sticker.setWidth(20);
-        
+        sticker.setWidth(20);        
         assertTrue(sticker.equals(sticker));
     }    
     
@@ -38,13 +42,11 @@ public class StickerTest {
         Sticker sticker = new Sticker();
         sticker.setFileId("fileId");
         sticker.setHeight(10);
-        sticker.setWidth(20);
-        
+        sticker.setWidth(20);        
         Sticker sticker2 = new Sticker();
         sticker2.setFileId("fileId");
         sticker2.setHeight(10);
-        sticker2.setWidth(20);
-        
+        sticker2.setWidth(20);        
         assertTrue(sticker.equals(sticker2));
     }
     
@@ -53,13 +55,11 @@ public class StickerTest {
         Sticker sticker = new Sticker();
         sticker.setFileId("fileId");
         sticker.setHeight(10);
-        sticker.setWidth(20);
-        
+        sticker.setWidth(20);        
         Sticker sticker2 = new Sticker();
         sticker2.setFileId("fileId2");
         sticker2.setHeight(50);
-        sticker2.setWidth(60);
-        
+        sticker2.setWidth(60);        
         assertFalse(sticker.equals(sticker2));     
     }
     
@@ -69,14 +69,12 @@ public class StickerTest {
         sticker.setFileId("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);
-        sticker.setFileSize(100);
-        
+        sticker.setFileSize(100);        
         Sticker sticker2 = new Sticker();
         sticker2.setFileId("fileId");
         sticker2.setHeight(10);
         sticker2.setWidth(20);
-        sticker2.setFileSize(200);
-        
+        sticker2.setFileSize(200);        
         assertTrue(sticker.equals(sticker2));       
     }
     
@@ -85,13 +83,11 @@ public class StickerTest {
         Sticker sticker = new Sticker();
         sticker.setFileId("fileId");
         sticker.setHeight(10);
-        sticker.setWidth(20);
-        
+        sticker.setWidth(20);        
         Sticker sticker2 = new Sticker();
         sticker2.setFileId("fileId");
         sticker2.setHeight(10);
-        sticker2.setWidth(20);
-        
+        sticker2.setWidth(20);        
         assertEquals(sticker.hashCode(), sticker2.hashCode());
     }
     
@@ -100,13 +96,11 @@ public class StickerTest {
         Sticker sticker = new Sticker();
         sticker.setFileId("fileId");
         sticker.setHeight(10);
-        sticker.setWidth(20);        
-        
+        sticker.setWidth(20);
         Sticker sticker2 = new Sticker();
         sticker2.setFileId("fileId2");
         sticker2.setHeight(50);
-        sticker2.setWidth(60);
-        
+        sticker2.setWidth(60);        
         assertNotEquals(sticker.hashCode(), sticker2.hashCode());
     }
     
@@ -116,14 +110,12 @@ public class StickerTest {
         sticker.setFileId("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);
-        sticker.setFileSize(100);
-        
+        sticker.setFileSize(100);        
         Sticker sticker2 = new Sticker();
         sticker2.setFileId("fileId");
         sticker2.setHeight(10);
         sticker2.setWidth(20);
-        sticker2.setFileSize(200);
-        
+        sticker2.setFileSize(200);        
         assertEquals(sticker.hashCode(), sticker2.hashCode());
     }        
 }

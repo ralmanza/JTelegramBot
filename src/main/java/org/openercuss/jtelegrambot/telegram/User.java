@@ -22,9 +22,13 @@ import java.util.Objects;
  * @author Roberto Almanza
  */
 public class User {
+    
     private int id;
+    
     private String firstName;
+    
     private String lastName;
+    
     private String userName;
 
     public int getId() {
@@ -69,16 +73,20 @@ public class User {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if (this == obj) {
+            return true;
+        }
+        
         if (obj == null) {
             return false;
         }
+        
         if (getClass() != obj.getClass()) {
             return false;
         }        
         final User other = (User) obj;
-        if (this.id != other.id) {
-            return false;
-        }
-        return Objects.equals(this.firstName, other.firstName);
+        return this.id == other.id &&
+                Objects.equals(this.firstName, other.firstName);
     }    
 }

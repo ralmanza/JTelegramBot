@@ -22,12 +22,19 @@ import java.util.Objects;
  * @author Roberto Almanza
  */
 public class Video {
+    
     private String fileId;
+    
     private int width;
+    
     private int height;
+    
     private int duration;
+    
     private PhotoSize thumb;
+    
     private String mimeType;
+    
     private int fileSize;
 
     public String getFileId() {
@@ -98,27 +105,22 @@ public class Video {
 
     @Override
     public boolean equals(Object obj) {
+        
+        if (this == obj) {
+            return true;
+        }
+        
         if (obj == null) {
             return false;
         }
+        
         if (getClass() != obj.getClass()) {
             return false;
         }
         final Video other = (Video) obj;
-        if (!Objects.equals(this.fileId, other.fileId)) {
-            return false;
-        }
-        if (this.width != other.width) {
-            return false;
-        }
-        if (this.height != other.height) {
-            return false;
-        }
-        if (this.duration != other.duration) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.fileId, other.fileId) &&
+                this.width == other.width &&
+                this.height == other.height &&
+                this.duration == other.duration;
     }
-    
-    
 }
