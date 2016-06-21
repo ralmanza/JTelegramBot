@@ -31,74 +31,74 @@ public class DocumentTest {
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         Document document = new Document();
-        document.setFileId("file1");
-        document.setFileName("doc1");        
+        document.setFile_id("file1");
+        document.setFile_name("doc1");        
         assertTrue(document.equals(document));
     }    
     
     @Test
     public void testEqualsOfTwoInstanceWithSameValues() {
         Document document = new Document();
-        document.setFileId("file1");
-        document.setFileName("doc1");        
+        document.setFile_id("file1");
+        document.setFile_name("doc1");        
         Document document2 = new Document();
-        document2.setFileId("file1");
-        document2.setFileName("doc1");        
+        document2.setFile_id("file1");
+        document2.setFile_name("doc1");        
         assertTrue(document.equals(document2));
     }
     
     @Test
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         Document document = new Document();
-        document.setFileId("file1");
-        document.setFileName("doc1");        
+        document.setFile_id("file1");
+        document.setFile_name("doc1");        
         Document document2 = new Document();
-        document2.setFileId("file2");
-        document2.setFileName("doc2");        
+        document2.setFile_id("file2");
+        document2.setFile_name("doc2");        
         assertFalse(document.equals(document2));
     }
     
     @Test
     public void testEqualsOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         Document document = new Document();
-        document.setFileId("file1");
-        document.setFileName("doc1");        
+        document.setFile_id("file1");
+        document.setFile_name("doc1");        
         Document document2 = new Document();
-        document2.setFileId("file1");
-        document2.setFileName("doc2");        
+        document2.setFile_id("file1");
+        document2.setFile_name("doc2");        
         assertTrue(document.equals(document2));        
     }
     
     @Test
     public void testHashCodeOfTwoInstanceWithSameValues() {
         Document document = new Document();
-        document.setFileId("file1");
-        document.setFileName("doc1");        
+        document.setFile_id("file1");
+        document.setFile_name("doc1");        
         Document document2 = new Document();
-        document2.setFileId("file1");
-        document2.setFileName("doc1");        
+        document2.setFile_id("file1");
+        document2.setFile_name("doc1");        
         assertEquals(document.hashCode(), document2.hashCode());
     }
     
     @Test
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         Document document = new Document();
-        document.setFileId("file1");
-        document.setFileName("doc1");        
+        document.setFile_id("file1");
+        document.setFile_name("doc1");        
         Document document2 = new Document();
-        document2.setFileId("file2");
-        document2.setFileName("doc2");        
+        document2.setFile_id("file2");
+        document2.setFile_name("doc2");        
         assertNotEquals(document.hashCode(), document2.hashCode());
     }
     
     @Test
     public void testHashCodeOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         Document document = new Document();
-        document.setFileId("file1");
-        document.setFileName("doc1");        
+        document.setFile_id("file1");
+        document.setFile_name("doc1");        
         Document document2 = new Document();
-        document2.setFileId("file1");
-        document2.setFileName("doc2");        
+        document2.setFile_id("file1");
+        document2.setFile_name("doc2");        
         assertEquals(document.hashCode(), document2.hashCode());        
     }     
 }

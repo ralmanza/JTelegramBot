@@ -23,7 +23,7 @@ import java.util.Objects;
  */
 public class Audio {
     
-    private String fileId;
+    private String field_id;
     
     private int duration;
     
@@ -31,16 +31,16 @@ public class Audio {
     
     private String title;
     
-    private String mimeType;
+    private String mime_type;
     
-    private int fileSize;
+    private int file_size;
 
-    public String getFileId() {
-        return fileId;
+    public String getField_id() {
+        return field_id;
     }
 
-    public void setFileId(String fileId) {
-        this.fileId = fileId;
+    public void setField_id(String field_id) {
+        this.field_id = field_id;
     }
 
     public int getDuration() {
@@ -67,26 +67,28 @@ public class Audio {
         this.title = title;
     }
 
-    public String getMimeType() {
-        return mimeType;
+    public String getMime_type() {
+        return mime_type;
     }
 
-    public void setMimeType(String mimeType) {
-        this.mimeType = mimeType;
+    public void setMime_type(String mime_type) {
+        this.mime_type = mime_type;
     }
 
-    public int getFileSize() {
-        return fileSize;
+    public int getFile_size() {
+        return file_size;
     }
 
-    public void setFileSize(int fileSize) {
-        this.fileSize = fileSize;
-    }    
+    public void setFile_size(int file_size) {
+        this.file_size = file_size;
+    }
+
+
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 83 * hash + Objects.hashCode(this.fileId);
+        hash = 83 * hash + Objects.hashCode(this.field_id);
         hash = 83 * hash + this.duration;
         return hash;
     }
@@ -106,7 +108,7 @@ public class Audio {
             return false;
         }
         final Audio other = (Audio) obj;         
-        return Objects.equals(this.fileId, other.fileId) && 
+        return Objects.equals(this.field_id, other.field_id) && 
                 this.duration == other.duration;
     }
 }

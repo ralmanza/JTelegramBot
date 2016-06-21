@@ -23,22 +23,22 @@ import java.util.Objects;
  */
 public class Document {
     
-    private String fileId;
+    private String file_id;
     
     private PhotoSize thumb;
     
-    private String fileName;
+    private String file_name;
     
-    private String mimeType;
+    private String mime_type;
     
-    private int fileSize;
+    private int file_size;
 
-    public String getFileId() {
-        return fileId;
+    public String getFile_id() {
+        return file_id;
     }
 
-    public void setFileId(String fileId) {
-        this.fileId = fileId;
+    public void setFile_id(String file_id) {
+        this.file_id = file_id;
     }
 
     public PhotoSize getThumb() {
@@ -49,34 +49,34 @@ public class Document {
         this.thumb = thumb;
     }
 
-    public String getFileName() {
-        return fileName;
+    public String getFile_name() {
+        return file_name;
     }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+    public void setFile_name(String file_name) {
+        this.file_name = file_name;
     }
 
-    public String getMimeType() {
-        return mimeType;
+    public String getMime_type() {
+        return mime_type;
     }
 
-    public void setMimeType(String mimeType) {
-        this.mimeType = mimeType;
+    public void setMime_type(String mime_type) {
+        this.mime_type = mime_type;
     }
 
-    public int getFileSize() {
-        return fileSize;
+    public int getFile_size() {
+        return file_size;
     }
 
-    public void setFileSize(int fileSize) {
-        this.fileSize = fileSize;
+    public void setFile_size(int file_size) {
+        this.file_size = file_size;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 83 * hash + Objects.hashCode(this.fileId);
+        hash = 83 * hash + Objects.hashCode(this.file_id);
         return hash;
     }
 
@@ -95,7 +95,6 @@ public class Document {
             return false;
         }
         final Document other = (Document) obj;
-        return Objects.equals(this.fileId, other.fileId);
-    }
-    
+        return Objects.equals(this.file_id, other.file_id);
+    }    
 }

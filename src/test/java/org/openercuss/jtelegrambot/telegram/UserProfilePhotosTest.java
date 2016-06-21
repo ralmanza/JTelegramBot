@@ -38,7 +38,7 @@ public class UserProfilePhotosTest {
         list.add(photos);
         photos.add(new PhotoSize());
         UserProfilePhotos userProfilePhotos = new UserProfilePhotos();
-        userProfilePhotos.setTotalCount(10);
+        userProfilePhotos.setTotal_count(10);
         userProfilePhotos.setPhotos(list);        
         assertTrue(userProfilePhotos.equals(userProfilePhotos));
     }    
@@ -47,21 +47,21 @@ public class UserProfilePhotosTest {
     public void testEqualsOfTwoInstanceWithSameValues() {
         List<PhotoSize> photos = new ArrayList();
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("1");
+        photoSize.setFile_id("1");
         photos.add(photoSize);
         List<List<PhotoSize>> list = new ArrayList();
         list.add(photos);
         UserProfilePhotos userProfilePhotos = new UserProfilePhotos();
-        userProfilePhotos.setTotalCount(10);
+        userProfilePhotos.setTotal_count(10);
         userProfilePhotos.setPhotos(list);
         List<PhotoSize> photos2 = new ArrayList();
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("1");
+        photoSize2.setFile_id("1");
         photos2.add(photoSize2);
         List<List<PhotoSize>> list2 = new ArrayList();
         list2.add(photos2);
         UserProfilePhotos userProfilePhotos2 = new UserProfilePhotos();
-        userProfilePhotos2.setTotalCount(10);
+        userProfilePhotos2.setTotal_count(10);
         userProfilePhotos2.setPhotos(list2);
         assertTrue(userProfilePhotos.equals(userProfilePhotos2));
     }
@@ -70,22 +70,22 @@ public class UserProfilePhotosTest {
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         List<PhotoSize> photos = new ArrayList();
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("1");
+        photoSize.setFile_id("1");
         photos.add(photoSize);
         List<List<PhotoSize>> list = new ArrayList();
         list.add(photos);
         UserProfilePhotos userProfilePhotos = new UserProfilePhotos();
-        userProfilePhotos.setTotalCount(10);
+        userProfilePhotos.setTotal_count(10);
         userProfilePhotos.setPhotos(list);
         List<PhotoSize> photos2 = new ArrayList();
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("1");
+        photoSize2.setFile_id("1");
         photos2.add(photoSize);
         photos2.add(photoSize2);
         List<List<PhotoSize>> list2 = new ArrayList();
         list2.add(photos2);
         UserProfilePhotos userProfilePhotos2 = new UserProfilePhotos();
-        userProfilePhotos2.setTotalCount(10);
+        userProfilePhotos2.setTotal_count(10);
         userProfilePhotos2.setPhotos(list2);
         assertFalse(userProfilePhotos.equals(userProfilePhotos2));
     }
@@ -94,21 +94,21 @@ public class UserProfilePhotosTest {
     public void testHashCodeOfTwoInstanceWithSameValues() {
         List<PhotoSize> photos = new ArrayList();
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("1");
+        photoSize.setFile_id("1");
         photos.add(photoSize);
         List<List<PhotoSize>> list = new ArrayList();
         list.add(photos);
         UserProfilePhotos userProfilePhotos = new UserProfilePhotos();
-        userProfilePhotos.setTotalCount(10);
+        userProfilePhotos.setTotal_count(10);
         userProfilePhotos.setPhotos(list);
         List<PhotoSize> photos2 = new ArrayList();
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("1");
+        photoSize2.setFile_id("1");
         photos2.add(photoSize2);
         List<List<PhotoSize>> list2 = new ArrayList();
         list2.add(photos2);
         UserProfilePhotos userProfilePhotos2 = new UserProfilePhotos();
-        userProfilePhotos2.setTotalCount(10);
+        userProfilePhotos2.setTotal_count(10);
         userProfilePhotos2.setPhotos(list2);
         assertEquals(userProfilePhotos.hashCode(), userProfilePhotos2.hashCode());
     }
@@ -117,21 +117,21 @@ public class UserProfilePhotosTest {
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         List<PhotoSize> photos = new ArrayList();
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("1");
+        photoSize.setFile_id("1");
         photos.add(photoSize);
         List<List<PhotoSize>> list = new ArrayList();
         list.add(photos);
         UserProfilePhotos userProfilePhotos = new UserProfilePhotos();
-        userProfilePhotos.setTotalCount(10);
+        userProfilePhotos.setTotal_count(10);
         userProfilePhotos.setPhotos(list);
         List<PhotoSize> photos2 = new ArrayList();
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("2");
+        photoSize2.setFile_id("2");
         photos2.add(photoSize2);
         List<List<PhotoSize>> list2 = new ArrayList();
         list2.add(photos2);
         UserProfilePhotos userProfilePhotos2 = new UserProfilePhotos();
-        userProfilePhotos2.setTotalCount(10);
+        userProfilePhotos2.setTotal_count(10);
         userProfilePhotos2.setPhotos(list2);
         assertNotEquals(userProfilePhotos.hashCode(), userProfilePhotos2.hashCode());
     }

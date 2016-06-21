@@ -31,7 +31,7 @@ public class ForceReplyTest {
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         ForceReply forceReply = new ForceReply();
-        forceReply.setForceReply(true);
+        forceReply.setForce_reply(true);
         forceReply.setSelective(true);
         assertTrue(forceReply.equals(forceReply));
     }    
@@ -39,10 +39,10 @@ public class ForceReplyTest {
     @Test
     public void testEqualsOfTwoInstanceWithSameValues() {
         ForceReply forceReply = new ForceReply();
-        forceReply.setForceReply(true);
+        forceReply.setForce_reply(true);
         forceReply.setSelective(true);     
         ForceReply forceReply2 = new ForceReply();
-        forceReply2.setForceReply(true);
+        forceReply2.setForce_reply(true);
         forceReply2.setSelective(true);
         assertTrue(forceReply.equals(forceReply2));
     }
@@ -50,10 +50,10 @@ public class ForceReplyTest {
     @Test
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         ForceReply forceReply = new ForceReply();
-        forceReply.setForceReply(true);
+        forceReply.setForce_reply(true);
         forceReply.setSelective(true);     
         ForceReply forceReply2 = new ForceReply();
-        forceReply2.setForceReply(true);
+        forceReply2.setForce_reply(true);
         forceReply2.setSelective(false);
         assertFalse(forceReply.equals(forceReply2));
     }
@@ -61,10 +61,10 @@ public class ForceReplyTest {
     @Test
     public void testHashCodeOfTwoInstanceWithSameValues() {
         ForceReply forceReply = new ForceReply();
-        forceReply.setForceReply(true);
+        forceReply.setForce_reply(true);
         forceReply.setSelective(true);     
         ForceReply forceReply2 = new ForceReply();
-        forceReply2.setForceReply(true);
+        forceReply2.setForce_reply(true);
         forceReply2.setSelective(true);              
         assertEquals(forceReply.hashCode(), forceReply2.hashCode(), 0.00001);
     }
@@ -72,10 +72,10 @@ public class ForceReplyTest {
     @Test
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         ForceReply forceReply = new ForceReply();
-        forceReply.setForceReply(true);
+        forceReply.setForce_reply(true);
         forceReply.setSelective(true);     
         ForceReply forceReply2 = new ForceReply();
-        forceReply2.setForceReply(true);
+        forceReply2.setForce_reply(true);
         forceReply2.setSelective(false);         
         assertNotEquals(forceReply.hashCode(), forceReply2.hashCode(), 0.00001);
     }

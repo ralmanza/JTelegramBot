@@ -23,7 +23,7 @@ import java.util.Objects;
  */
 public class Video {
     
-    private String fileId;
+    private String file_id;
     
     private int width;
     
@@ -33,16 +33,16 @@ public class Video {
     
     private PhotoSize thumb;
     
-    private String mimeType;
+    private String mime_type;
     
-    private int fileSize;
+    private int file_size;
 
-    public String getFileId() {
-        return fileId;
+    public String getFile_id() {
+        return file_id;
     }
 
-    public void setFileId(String fileId) {
-        this.fileId = fileId;
+    public void setFile_id(String file_id) {
+        this.file_id = file_id;
     }
 
     public int getWidth() {
@@ -77,26 +77,26 @@ public class Video {
         this.thumb = thumb;
     }
 
-    public String getMimeType() {
-        return mimeType;
+    public String getMime_type() {
+        return mime_type;
     }
 
-    public void setMimeType(String mimeType) {
-        this.mimeType = mimeType;
+    public void setMime_type(String mime_type) {
+        this.mime_type = mime_type;
     }
 
-    public int getFileSize() {
-        return fileSize;
+    public int getFile_size() {
+        return file_size;
     }
 
-    public void setFileSize(int fileSize) {
-        this.fileSize = fileSize;
+    public void setFile_size(int file_size) {
+        this.file_size = file_size;
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 13 * hash + Objects.hashCode(this.fileId);
+        hash = 13 * hash + Objects.hashCode(this.file_id);
         hash = 13 * hash + this.width;
         hash = 13 * hash + this.height;
         hash = 13 * hash + this.duration;
@@ -118,7 +118,7 @@ public class Video {
             return false;
         }
         final Video other = (Video) obj;
-        return Objects.equals(this.fileId, other.fileId) &&
+        return Objects.equals(this.file_id, other.file_id) &&
                 this.width == other.width &&
                 this.height == other.height &&
                 this.duration == other.duration;

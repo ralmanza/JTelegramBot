@@ -31,7 +31,7 @@ public class StickerTest {
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         Sticker sticker = new Sticker();
-        sticker.setFileId("fileId");
+        sticker.setFile_id("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);        
         assertTrue(sticker.equals(sticker));
@@ -40,11 +40,11 @@ public class StickerTest {
     @Test
     public void testEqualsOfTwoInstanceWithSameValues() {
         Sticker sticker = new Sticker();
-        sticker.setFileId("fileId");
+        sticker.setFile_id("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);        
         Sticker sticker2 = new Sticker();
-        sticker2.setFileId("fileId");
+        sticker2.setFile_id("fileId");
         sticker2.setHeight(10);
         sticker2.setWidth(20);        
         assertTrue(sticker.equals(sticker2));
@@ -53,11 +53,11 @@ public class StickerTest {
     @Test
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         Sticker sticker = new Sticker();
-        sticker.setFileId("fileId");
+        sticker.setFile_id("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);        
         Sticker sticker2 = new Sticker();
-        sticker2.setFileId("fileId2");
+        sticker2.setFile_id("fileId2");
         sticker2.setHeight(50);
         sticker2.setWidth(60);        
         assertFalse(sticker.equals(sticker2));     
@@ -66,12 +66,12 @@ public class StickerTest {
     @Test
     public void testEqualsOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         Sticker sticker = new Sticker();
-        sticker.setFileId("fileId");
+        sticker.setFile_id("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);
         sticker.setFileSize(100);        
         Sticker sticker2 = new Sticker();
-        sticker2.setFileId("fileId");
+        sticker2.setFile_id("fileId");
         sticker2.setHeight(10);
         sticker2.setWidth(20);
         sticker2.setFileSize(200);        
@@ -81,11 +81,11 @@ public class StickerTest {
     @Test
     public void testHashCodeOfTwoInstanceWithSameValues() {
         Sticker sticker = new Sticker();
-        sticker.setFileId("fileId");
+        sticker.setFile_id("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);        
         Sticker sticker2 = new Sticker();
-        sticker2.setFileId("fileId");
+        sticker2.setFile_id("fileId");
         sticker2.setHeight(10);
         sticker2.setWidth(20);        
         assertEquals(sticker.hashCode(), sticker2.hashCode());
@@ -94,11 +94,11 @@ public class StickerTest {
     @Test
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         Sticker sticker = new Sticker();
-        sticker.setFileId("fileId");
+        sticker.setFile_id("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);
         Sticker sticker2 = new Sticker();
-        sticker2.setFileId("fileId2");
+        sticker2.setFile_id("fileId2");
         sticker2.setHeight(50);
         sticker2.setWidth(60);        
         assertNotEquals(sticker.hashCode(), sticker2.hashCode());
@@ -107,12 +107,12 @@ public class StickerTest {
     @Test
     public void testHashCodeOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         Sticker sticker = new Sticker();
-        sticker.setFileId("fileId");
+        sticker.setFile_id("fileId");
         sticker.setHeight(10);
         sticker.setWidth(20);
         sticker.setFileSize(100);        
         Sticker sticker2 = new Sticker();
-        sticker2.setFileId("fileId");
+        sticker2.setFile_id("fileId");
         sticker2.setHeight(10);
         sticker2.setWidth(20);
         sticker2.setFileSize(200);        

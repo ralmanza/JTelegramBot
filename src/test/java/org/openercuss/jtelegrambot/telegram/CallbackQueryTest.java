@@ -72,12 +72,12 @@ public class CallbackQueryTest {
         callbackQuery.setId("query");
         callbackQuery.setFrom(user);
         callbackQuery.setData("query data");
-        callbackQuery.setInlineMessageId("msg");        
+        callbackQuery.setInline_message_id("msg");        
         CallbackQuery callbackQuery2 = new CallbackQuery();
         callbackQuery2.setId("query");
         callbackQuery2.setFrom(user);
         callbackQuery2.setData("query data");
-        callbackQuery2.setInlineMessageId("msg");        
+        callbackQuery2.setInline_message_id("msg");        
         assertTrue(callbackQuery.equals(callbackQuery2));
     }
     
@@ -116,12 +116,12 @@ public class CallbackQueryTest {
         callbackQuery.setId("query");
         callbackQuery.setFrom(user);
         callbackQuery.setData("data");
-        callbackQuery.setInlineMessageId("msgId");        
+        callbackQuery.setInline_message_id("msgId");        
         CallbackQuery callbackQuery2 = new CallbackQuery();
         callbackQuery2.setId("query");
         callbackQuery2.setFrom(user);
         callbackQuery2.setData("data");
-        callbackQuery2.setInlineMessageId("msg");                
+        callbackQuery2.setInline_message_id("msg");                
         assertEquals(callbackQuery.hashCode(), callbackQuery2.hashCode(), 0.00001);
     } 
 }

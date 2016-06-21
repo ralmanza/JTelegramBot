@@ -23,7 +23,7 @@ import java.util.Objects;
  */
 public class PhotoSize {
     
-    private String fileId;
+    private String file_id;
     
     private int width;
     
@@ -31,12 +31,12 @@ public class PhotoSize {
     
     private int fileSize;
 
-    public String getFileId() {
-        return fileId;
+    public String getFile_id() {
+        return file_id;
     }
 
-    public void setFileId(String fileId) {
-        this.fileId = fileId;
+    public void setFile_id(String file_id) {
+        this.file_id = file_id;
     }
 
     public int getWidth() {
@@ -61,12 +61,12 @@ public class PhotoSize {
 
     public void setFileSize(int fileSize) {
         this.fileSize = fileSize;
-    }  
+    }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 71 * hash + Objects.hashCode(this.fileId);
+        hash = 71 * hash + Objects.hashCode(this.file_id);
         hash = 71 * hash + this.width;
         hash = 71 * hash + this.height;
         return hash;
@@ -87,7 +87,7 @@ public class PhotoSize {
             return false;
         }
         final PhotoSize other = (PhotoSize) obj;
-        return Objects.equals(this.fileId, other.fileId) &&
+        return Objects.equals(this.file_id, other.file_id) &&
                 this.width == other.width &&
                 this.height == other.height;
     }    

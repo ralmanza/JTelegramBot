@@ -24,16 +24,16 @@ import java.util.Objects;
  */
 public class UserProfilePhotos {
     
-    private int totalCount;
+    private int total_count;
 
     private List<List<PhotoSize>> photos;
 
-    public int getTotalCount() {
-        return totalCount;
+    public int getTotal_count() {
+        return total_count;
     }
 
-    public void setTotalCount(int totalCount) {
-        this.totalCount = totalCount;
+    public void setTotal_count(int total_count) {
+        this.total_count = total_count;
     }
 
     public List<List<PhotoSize>> getPhotos() {
@@ -47,7 +47,7 @@ public class UserProfilePhotos {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 13 * hash + this.totalCount;
+        hash = 13 * hash + this.total_count;
         hash = 13 * hash + Objects.hashCode(this.photos);
         return hash;
     }
@@ -67,7 +67,7 @@ public class UserProfilePhotos {
             return false;
         }
         final UserProfilePhotos other = (UserProfilePhotos) obj;
-        return this.totalCount == other.totalCount &&
+        return this.total_count == other.total_count &&
             Objects.equals(this.photos, other.photos);
     }    
 }

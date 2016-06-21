@@ -20,5 +20,5 @@ package org.openercuss.jtelegrambot.telegram;
  * @author Roberto Almanza
  */
 public class Message {
-    
+
 }

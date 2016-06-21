@@ -29,7 +29,7 @@ public class CallbackQuery {
 
     private Message message;
 
-    private String inlineMessageId;
+    private String inline_message_id;
 
     private String data;
 
@@ -57,12 +57,12 @@ public class CallbackQuery {
         this.message = message;
     }
 
-    public String getInlineMessageId() {
-        return inlineMessageId;
+    public String getInline_message_id() {
+        return inline_message_id;
     }
 
-    public void setInlineMessageId(String inlineMessageId) {
-        this.inlineMessageId = inlineMessageId;
+    public void setInline_message_id(String inline_message_id) {
+        this.inline_message_id = inline_message_id;
     }
 
     public String getData() {

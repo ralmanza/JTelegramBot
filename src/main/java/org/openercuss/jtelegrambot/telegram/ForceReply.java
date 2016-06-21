@@ -21,16 +21,16 @@ package org.openercuss.jtelegrambot.telegram;
  */
 public class ForceReply {
     
-    private boolean forceReply;
+    private boolean force_reply;
     
     private boolean selective;
 
-    public boolean isForceReply() {
-        return forceReply;
+    public boolean isForce_reply() {
+        return force_reply;
     }
 
-    public void setForceReply(boolean forceReply) {
-        this.forceReply = forceReply;
+    public void setForce_reply(boolean force_reply) {
+        this.force_reply = force_reply;
     }
 
     public boolean isSelective() {
@@ -44,7 +44,7 @@ public class ForceReply {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 59 * hash + (this.forceReply ? 1 : 0);
+        hash = 59 * hash + (this.force_reply ? 1 : 0);
         hash = 59 * hash + (this.selective ? 1 : 0);
         return hash;
     }
@@ -64,7 +64,7 @@ public class ForceReply {
             return false;
         }
         final ForceReply other = (ForceReply) obj;
-        return this.forceReply == other.forceReply &&
+        return this.force_reply == other.force_reply &&
                 this.selective == other.selective;
     }
 }

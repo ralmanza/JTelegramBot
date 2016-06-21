@@ -31,7 +31,7 @@ public class VideoTest {
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         Video video = new Video();
-        video.setFileId("fileId");
+        video.setFile_id("fileId");
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);        
@@ -41,12 +41,12 @@ public class VideoTest {
     @Test
     public void testEqualsOfTwoInstanceWithSameValues() {
         Video video = new Video();
-        video.setFileId("fileId");
+        video.setFile_id("fileId");
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);        
         Video video2 = new Video();
-        video2.setFileId("fileId");
+        video2.setFile_id("fileId");
         video2.setWidth(10);
         video2.setHeight(10);
         video2.setDuration(10);        
@@ -56,12 +56,12 @@ public class VideoTest {
     @Test
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         Video video = new Video();
-        video.setFileId("fileId");
+        video.setFile_id("fileId");
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);        
         Video video2 = new Video();
-        video2.setFileId("fileId2");
+        video2.setFile_id("fileId2");
         video2.setWidth(20);
         video2.setHeight(20);
         video2.setDuration(20);        
@@ -71,29 +71,29 @@ public class VideoTest {
     @Test
     public void testEqualsOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         Video video = new Video();
-        video.setFileId("fileId");
+        video.setFile_id("fileId");
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);
-        video.setMimeType("mimeType");        
+        video.setMime_type("mimeType");        
         Video video2 = new Video();
-        video2.setFileId("fileId");
+        video2.setFile_id("fileId");
         video2.setWidth(10);
         video2.setHeight(10);
         video2.setDuration(10);
-        video.setMimeType("mimeType2");        
+        video.setMime_type("mimeType2");        
         assertTrue(video.equals(video2));    
     }
     
     @Test
     public void testHashCodeOfTwoInstanceWithSameValues() {
         Video video = new Video();
-        video.setFileId("fileId");
+        video.setFile_id("fileId");
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);        
         Video video2 = new Video();
-        video2.setFileId("fileId");
+        video2.setFile_id("fileId");
         video2.setWidth(10);
         video2.setHeight(10);
         video2.setDuration(10);        
@@ -103,12 +103,12 @@ public class VideoTest {
     @Test
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         Video video = new Video();
-        video.setFileId("fileId");
+        video.setFile_id("fileId");
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);        
         Video video2 = new Video();
-        video2.setFileId("fileId2");
+        video2.setFile_id("fileId2");
         video2.setWidth(10);
         video2.setHeight(10);
         video2.setDuration(20);        
@@ -118,17 +118,17 @@ public class VideoTest {
     @Test
     public void testHashCodeOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         Video video = new Video();
-        video.setFileId("fileId");
+        video.setFile_id("fileId");
         video.setWidth(10);
         video.setHeight(10);
         video.setDuration(10);
-        video.setMimeType("mimeType");        
+        video.setMime_type("mimeType");        
         Video video2 = new Video();
-        video2.setFileId("fileId");
+        video2.setFile_id("fileId");
         video2.setWidth(10);
         video2.setHeight(10);
         video2.setDuration(10);
-        video.setMimeType("mimeType2");        
+        video.setMime_type("mimeType2");        
         assertEquals(video.hashCode(), video2.hashCode());
     }
 }

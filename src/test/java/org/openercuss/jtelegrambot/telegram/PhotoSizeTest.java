@@ -31,7 +31,7 @@ public class PhotoSizeTest {
     @Test
     public void testEqualsWithTheSameInstansAsAParameter() {
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("fileId");
+        photoSize.setFile_id("fileId");
         photoSize.setHeight(10);
         photoSize.setWidth(20);        
         assertTrue(photoSize.equals(photoSize));
@@ -40,11 +40,11 @@ public class PhotoSizeTest {
     @Test
     public void testEqualsOfTwoInstanceWithSameValues() {
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("fileId");
+        photoSize.setFile_id("fileId");
         photoSize.setHeight(10);
         photoSize.setWidth(20);        
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("fileId");
+        photoSize2.setFile_id("fileId");
         photoSize2.setHeight(10);
         photoSize2.setWidth(20);        
         assertTrue(photoSize.equals(photoSize2));
@@ -53,11 +53,11 @@ public class PhotoSizeTest {
     @Test
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("fileId");
+        photoSize.setFile_id("fileId");
         photoSize.setHeight(10);
         photoSize.setWidth(20);        
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("fileId2");
+        photoSize2.setFile_id("fileId2");
         photoSize2.setHeight(50);
         photoSize2.setWidth(60);        
         assertFalse(photoSize.equals(photoSize2));     
@@ -66,12 +66,12 @@ public class PhotoSizeTest {
     @Test
     public void testEqualsOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("fileId");
+        photoSize.setFile_id("fileId");
         photoSize.setHeight(10);
         photoSize.setWidth(20);
         photoSize.setFileSize(100);        
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("fileId");
+        photoSize2.setFile_id("fileId");
         photoSize2.setHeight(10);
         photoSize2.setWidth(20);
         photoSize2.setFileSize(200);        
@@ -81,11 +81,11 @@ public class PhotoSizeTest {
     @Test
     public void testHashCodeOfTwoInstanceWithSameValues() {
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("fileId");
+        photoSize.setFile_id("fileId");
         photoSize.setHeight(10);
         photoSize.setWidth(20);        
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("fileId");
+        photoSize2.setFile_id("fileId");
         photoSize2.setHeight(10);
         photoSize2.setWidth(20);        
         assertEquals(photoSize.hashCode(), photoSize2.hashCode());
@@ -94,11 +94,11 @@ public class PhotoSizeTest {
     @Test
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("fileId");
+        photoSize.setFile_id("fileId");
         photoSize.setHeight(10);
         photoSize.setWidth(20);
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("fileId2");
+        photoSize2.setFile_id("fileId2");
         photoSize2.setHeight(50);
         photoSize2.setWidth(60);        
         assertNotEquals(photoSize.hashCode(), photoSize2.hashCode());
@@ -107,12 +107,12 @@ public class PhotoSizeTest {
     @Test
     public void testHashCodeOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         PhotoSize photoSize = new PhotoSize();
-        photoSize.setFileId("fileId");
+        photoSize.setFile_id("fileId");
         photoSize.setHeight(10);
         photoSize.setWidth(20);
         photoSize.setFileSize(100);        
         PhotoSize photoSize2 = new PhotoSize();
-        photoSize2.setFileId("fileId");
+        photoSize2.setFile_id("fileId");
         photoSize2.setHeight(10);
         photoSize2.setWidth(20);
         photoSize2.setFileSize(200);        

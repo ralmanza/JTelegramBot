@@ -32,7 +32,7 @@ public class UserTest {
     public void testEqualsWithTheSameInstansAsAParameter() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Pedro");
+        user.setFirst_name("Pedro");
         assertTrue(user.equals(user));
     }    
     
@@ -40,10 +40,10 @@ public class UserTest {
     public void testEqualsOfTwoInstanceWithSameValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Maria");        
+        user.setFirst_name("Maria");        
         User user2 = new User();
         user2.setId(1);
-        user2.setFirstName("Maria");        
+        user2.setFirst_name("Maria");        
         assertTrue(user.equals(user2));
     }
     
@@ -51,10 +51,10 @@ public class UserTest {
     public void testEqualsOfTwoInstanceWithDifferentValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Pedro");        
+        user.setFirst_name("Pedro");        
         User user2 = new User();
         user2.setId(2);
-        user2.setFirstName("Maria");        
+        user2.setFirst_name("Maria");        
         assertFalse(user.equals(user2));
     }
     
@@ -62,12 +62,12 @@ public class UserTest {
     public void testEqualsOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Pedro");
-        user.setLastName("Mendez");        
+        user.setFirst_name("Pedro");
+        user.setLast_name("Mendez");        
         User user2 = new User();
         user2.setId(1);
-        user2.setFirstName("Pedro");
-        user2.setLastName("Lopez");        
+        user2.setFirst_name("Pedro");
+        user2.setLast_name("Lopez");        
         assertTrue(user.equals(user2));
     }
     
@@ -75,10 +75,10 @@ public class UserTest {
     public void testHashCodeOfTwoInstanceWithSameValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Maria");        
+        user.setFirst_name("Maria");        
         User user2 = new User();
         user2.setId(1);
-        user2.setFirstName("Maria");                
+        user2.setFirst_name("Maria");                
         assertEquals(user.hashCode(), user2.hashCode(), 0.00001);
     }
     
@@ -86,10 +86,10 @@ public class UserTest {
     public void testHashCodeOfTwoInstanceWithDifferentValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Maria");        
+        user.setFirst_name("Maria");        
         User user2 = new User();
         user2.setId(2);
-        user2.setFirstName("Pedro");                
+        user2.setFirst_name("Pedro");                
         assertNotEquals(user.hashCode(), user2.hashCode(), 0.00001);
     }
     
@@ -97,12 +97,12 @@ public class UserTest {
     public void testHashCodeOfTwoInstanceWithSameRequiredValuesAndDifferentOptionalValues() {
         User user = new User();
         user.setId(1);
-        user.setFirstName("Maria");
-        user.setUserName("mariavf");        
+        user.setFirst_name("Maria");
+        user.setUser_name("mariavf");        
         User user2 = new User();
         user2.setId(1);
-        user2.setFirstName("Maria");
-        user2.setUserName("mde123");                
+        user2.setFirst_name("Maria");
+        user2.setUser_name("mde123");                
         assertEquals(user.hashCode(), user2.hashCode(), 0.00001);
     }
 }
