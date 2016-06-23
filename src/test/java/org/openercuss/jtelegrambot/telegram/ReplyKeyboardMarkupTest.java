@@ -95,5 +95,4 @@ public class ReplyKeyboardMarkupTest {
         replyKeyboardMarkup2.setKeyboard(keyboardButtonList2);
         assertNotEquals(replyKeyboardMarkup, replyKeyboardMarkup2);
     }
-
 }

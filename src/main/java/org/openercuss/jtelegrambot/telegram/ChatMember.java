@@ -68,6 +68,5 @@ public class ChatMember {
         final ChatMember other = (ChatMember) obj;        
         return Objects.equals(this.user, other.user) &&
                 Objects.equals(this.status, other.status);
-    }
-    
+    }    
 }

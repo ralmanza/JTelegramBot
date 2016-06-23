@@ -61,7 +61,7 @@ public class KeyboardButton {
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj) {        
         if (this == obj) {
             return true;
         }
@@ -74,7 +74,6 @@ public class KeyboardButton {
             return false;
         }
         final KeyboardButton other = (KeyboardButton) obj;
-
         return Objects.equals(this.text, other.text);
     }
 }

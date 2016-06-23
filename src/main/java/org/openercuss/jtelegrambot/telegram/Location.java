@@ -67,5 +67,4 @@ public class Location {
         return Float.floatToIntBits(this.longitude) == Float.floatToIntBits(other.longitude)
                 && Float.floatToIntBits(this.latitude) == Float.floatToIntBits(other.latitude);
     }
-
 }

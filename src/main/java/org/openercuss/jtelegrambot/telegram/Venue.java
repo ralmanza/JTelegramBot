@@ -88,5 +88,4 @@ public class Venue {
                 && Objects.equals(this.address, other.address)
                 && Objects.equals(this.location, other.location);
     }
-
 }
